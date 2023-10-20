@@ -1,0 +1,21 @@
+UID: http:url:561a84f6e6
+label: MO
+thingTypeUID: http:url
+configuration:
+  authMode: BASIC
+  ignoreSSLErrors: false
+  baseURL: http://192.168.100.17/e098068c9ffb/json/mo/
+  delay: 0
+  stateMethod: GET
+  refresh: 1
+  commandMethod: GET
+  timeout: 3000
+  bufferSize: 2048
+channels:
+  - id: nu-mo
+    channelTypeUID: http:number
+    label: nu-mo
+    description: null
+    configuration:
+      mode: READONLY
+      stateTransformation: JSONPATH:$.moisture_percent
